@@ -6,6 +6,7 @@ import os, time, sys, yaml
 #APIキーの情報
 f = open('flickrapi_key.yml', 'r+')
 config = yaml.load(f)
+f.close()
 key = config["key"]
 secret = config["secret"]
 wait_time = 1
