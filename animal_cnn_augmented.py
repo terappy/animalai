@@ -88,7 +88,7 @@ def model_train(X, y):
     # 呼び出す
     # batch_size: エポック（一回のトレーニング）の際に使うデータの数
     # epochs: エポックを何回行うか
-    model.fit(X, y, batch_size=32, epochs=100)
+    model.fit(X, y, batch_size=80, epochs=200)
 
     # モデルの保存
     model.save('./animal_cnn_aug.h5')

@@ -9,7 +9,7 @@ num_classes = len(classes)
 # 計算時間の短縮のために画像の縮小をする
 image_size = 50
 # テストデータの数を設定
-num_testdata = 50
+num_testdata = 40
 
 # 画像の読み込み
 
@@ -40,10 +40,7 @@ for index, classlabel in enumerate(classes):
             Y_test.append(index)
         else:
             # 学習用データの時
-            X_train.append(data)
-            Y_train.append(index)
-
-            for angle in range(-20,20,5):
+            for angle in range(-25,25,5):
                 # 回転
                 img_r = image.rotate(angle)
                 data = np.asarray(img_r)
@@ -51,15 +48,10 @@ for index, classlabel in enumerate(classes):
                 Y_train.append(index)
 
                 # 反転
-                img_trans = image.transpose(Image.FLIP_LEFT_RIGHT)
+                img_trans = img_r.transpose(Image.FLIP_LEFT_RIGHT)
                 data = np.asarray(img_trans)
                 X_train.append(data)
                 Y_train.append(index)
-
-
-
-
-
 
 # tensorflowが扱いやすいnumpyの配列に変換
 # X = np.array(X)
