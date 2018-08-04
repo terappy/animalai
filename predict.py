@@ -96,7 +96,7 @@ def main():
     result = model.predict([X])[0]
     # 一番値の大きい配列の添え字を取得
     predicted = result.argmax()
-    # 確率
+    # 一致する確率
     percentage = int(result[predicted] * 100)
     # 結果を表示
     print("{0} ({1} %)".format(classes[predicted], percentage))
