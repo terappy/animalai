@@ -1,3 +1,4 @@
 .vscode/
 .ipynb_checkpoints/
 flickrapi_key.yml
+__pycache__/
